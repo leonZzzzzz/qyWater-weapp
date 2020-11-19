@@ -1,0 +1,12 @@
+
+<view class='con'>
+  <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200923/null/ac10100d746d449e0174b9a221080c8b.png'></image>
+  <view class='text' style='color:rgb(8,151,69)'>报料内容上传成功</view>
+  <view class='audit'>
+    <view>请等待管理员审核</view>
+  </view>
+  <view class='btn1' bindtap='confirm'>继续报料</view>
+  <view class='btn1' bindtap='record'>我的报料记录</view>
+  <view class='btn2' bindtap='goback'>返回首页</view>
+</view>
+<w-split></w-split>

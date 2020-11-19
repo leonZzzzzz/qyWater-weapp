@@ -1,0 +1,29 @@
+<view style='z-index:10;background:#fff'>
+  <view class='content'>
+    <view class='title'>活动时间</view>
+    <view class='text'>2020年10月1至2020年12月31日</view>
+  </view>
+  <view class='content'>
+    <view class='title'>活动范围</view>
+    <view class='text'>清远市黑臭水体河面及河岸</view>
+    <view class='subhead'>（一）聘请城市黑臭水体监督员</view>
+    <view class='text' style="text-indent:56rpx;"><text>点击“我要成为监督员”选择监督区域并填写资料申请城市黑臭水体监督员，提交后需待审核员审核，招募监督员共8名。城市黑臭水体监督员的基本要求：18周岁至50周岁，男女不限，身体健康，能熟练使用智能手机，有责任心，能吃苦耐劳，热爱城市黑臭水体管理工作。</text></view>
+    <view class='subhead'>（二）招募城市黑臭水体志愿者</view>
+    <view class='text' style="text-indent:56rpx;"><text>所有人可成为清道夫活动志愿者，可随时通过清远水利微信公众号投诉、举报和反映城管问题或提出意见和建议。志愿者可通过操作指引反应本活动范围内的城市黑臭水体存在的问题，不受网格管理范围限制。</text></view>
+  </view>
+  <view class='content'>
+    <view class='title'>工作考核和奖罚机制</view>
+    <view class='subhead'>（一）城市黑臭水体监督员</view>
+    <view class='text'>
+      <text>1.城市黑臭水体监督员每月须上报有效问题30宗。</text>
+      <view>2.城市黑臭水体监督员当月不能完成上报任务的，取消监督员资格。</view>
+      <view>3.城市黑臭水体监督员奖品为：每月100元话费，根据任务完成情况在第二个月10日前重置。</view>
+      <view>4.根据表现监督员设置一二三名，年度前发放1000元+证书、800元+证书、500元+证书，并举办表彰大会。</view>
+    </view>
+    <view class='subhead'>（二）城市黑臭水体志愿者</view>
+    <view class='text'>1.根据上传的案件数量设置一二三名，年底前发放800元+证书、500元+证书、200元+证书，并举办表彰大会。</view>
+    <view class='tip'>本活动工作方案由清远市水利局负责解释</view>
+  </view>
+</view>
+<view style='height:100rpx;'></view>
+<w-split></w-split>

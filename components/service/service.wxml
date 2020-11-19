@@ -1,0 +1,6 @@
+<!--components/service/service.wxml-->
+<!-- 客服浮窗 -->
+
+  
+<button class="serviceIcon" open-type="contact" ><text class='icon i-kefu2'></text>客服</button>
+  

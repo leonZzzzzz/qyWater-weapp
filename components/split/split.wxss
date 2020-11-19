@@ -1,0 +1,5 @@
+/* components/service/service.wxss */
+@import "../../iconfont.wxss";
+.logo{
+  text-align: center;position: fixed;bottom: 0rpx;width: 100%;z-index:-1;padding-bottom:10rpx;
+}

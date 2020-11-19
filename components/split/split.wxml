@@ -1,0 +1,4 @@
+<view class='logo' style='height:{{showtext?"116rpx":"74rpx"}};'>
+  <image style='width:80rpx;height:74rpx' src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b3a5fa4d0bdd.png'></image>
+  <view wx:if="{{showtext}}" style='color:#089745;font-size:24rpx;'>本活动工作方案由清远市水利局负责解释</view>
+</view>

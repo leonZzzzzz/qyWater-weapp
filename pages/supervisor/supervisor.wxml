@@ -1,0 +1,38 @@
+<view class="page-section page-section-gap">
+  <map
+    id="myMap"
+    style="width: 100%; height: 1500rpx;"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    covers="{{covers}}"
+    show-location
+  ></map>
+</view>
+<view class='model'>
+  <view class='surnmodel'></view>
+  <view class='modelcontent'>
+    <view class='titlemodel'>请填写以下资料</view>
+    <view class='subhead'>
+      <view>.城市黑臭水体监督员每月须上报有效问题30宗；</view>
+      <view>.当月不能完成上报任务的，取消监督员资格；</view>
+      <view>.招聘监督员合计8名。</view>
+    </view>
+    <view class='continput'>
+      <text class='iconfont icon-xingming' style='font-size:40rpx;margin-left:5rpx;margin-right:5rpx'></text>
+      <input wx:if='{{name}}' placeholder="请输入姓名" value='{{name}}' disabled="disabled"/>
+      <input wx:else placeholder="请输入姓名" value='{{name}}'/>
+    </view>
+    <view class='continput'>
+      <text class='iconfont icon-wuliushouquan'></text>
+      <input placeholder="请授权微信绑定手机" wx:if="{{memberId}}" value="{{phone}}" disabled="disabled"/>
+      <input placeholder="请授权微信绑定手机" wx:else value="{{phone}}"/>
+      <button wx:if="{{!phone}}" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">授权</button>
+    </view>
+    <view class='notate'>注：提交后需管理员审核，审核约1-3个工作日</view>
+    <view class='btn'>
+      <!-- <view bindtap='close'>取消</view> -->
+      <view bindtap='memberconfirm'>确定</view>
+    </view>
+  </view>
+</view>

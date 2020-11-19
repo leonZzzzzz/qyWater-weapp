@@ -1,0 +1,21 @@
+.content{
+  margin:30rpx;
+}
+.title{
+  font-weight:bold;
+  margin-bottom:30rpx
+}
+.text{
+  font-size:26rpx;
+  line-height:50rpx;
+}
+.subhead{
+  color:rgb(8,151,69);
+  font-size:30rpx;
+  margin:30rpx 0;
+  font-weight:bold;
+}
+.tip{
+  font-size:26rpx;
+  margin-top:50rpx;
+}

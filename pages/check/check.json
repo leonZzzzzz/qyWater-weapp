@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "监督员审核",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "w-split": "../../components/split/split"
+  }
+}

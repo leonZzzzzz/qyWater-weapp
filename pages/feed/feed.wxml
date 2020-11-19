@@ -1,0 +1,46 @@
+<view class='con'>
+  <view class='picimg' >
+    <view wx:for="{{attachments}}" class='pics'>
+      <image style='width:160rpx;height:160rpx;' src="{{imageurl}}{{item}}"></image>
+      <text style='position:absolute;right:0;top:0' bindtap='deleteImg' data-index='{{index}}' class='iconfont icon-cuowu'></text>
+    </view>
+    <image wx:if="{{attachments.length<8}}" bindtap='uploadpic' src="https://athena-1255600302.cosgz.myqcloud.com/attachments/null/1a6db801199f422ba1d6f55c9e3db240.png" background-size="cover"></image>
+  </view>
+  <textarea bindinput='getinfo' placeholder="请输入水体详细情况（不少于5字）" minlength='5'></textarea>
+  <view class='title'>请选择水体描述关键词：</view>
+  <view class='keyword'>
+    <text bindtap='clicktext' data-index="{{index}}" wx:for='{{keys}}' class='{{item.check?"back":" "}}'>{{item.name}}</text>
+  </view>
+  
+  <view class='content'>
+    <view class='conrow'>
+      <text class='iconfont icon-xingming2 one'></text>
+      <text class='feedpeo'>报料人</text>
+      <input placeholder="请输入姓名" value="{{userinfo.name}}({{userinfo.mobilePhoneNumber}})" disabled="disabled"/>
+    </view>
+    <view class='conrow'>
+      <text class='iconfont icon-heliu one'></text>
+      <text class='feedpeo'>所属河流</text>
+      <view style='display:flex'>
+        <picker bindchange="bindPickerRivers" range="{{rivers}}" range-key="name">
+          <view wx:if='{{rivername}}' style='color:#000'>{{rivername}}</view>
+          <view wx:else style='color:rgb(139, 139, 139)'>请输入所属河流</view>
+        </picker>
+        <text class='iconfont icon-youjiantou two'></text>
+      </view>
+    </view>
+    <view class='conrow'>
+      <text class='iconfont icon-dizhi one'></text>
+      <text class='feedpeo'>详细地址</text>
+      <view style='display:flex' bindtap='gomap'>
+        <input placeholder="请标注详细地址" value='{{address}}' disabled="disabled"/>
+        <text class='iconfont icon-youjiantou two'></text>
+      </view>
+    </view>
+  </view>
+  <view style='height:200rpx'></view>
+</view>
+<view class='botm'>
+  <view class='btn' bindtap='confirm'>确认提交</view>
+  <w-split></w-split>
+</view>

@@ -1,0 +1,81 @@
+<view style='position:fixed;bottom:160rpx'>
+  <image style='width:100%;position:fixed;top:0;z-index:-2' mode="widthFix" src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b3841c050bd9.png'></image>
+  <view class='content' style="text-indent:56rpx;">
+    <text>通过开展2020清远市黑臭水体“清道夫”活动，发动大量的城市黑臭水体监督员和城市黑臭水体志愿者寻找发现水体河道黑臭、垃圾堆放等现象，利用清远水利微信公众号搜集相关线索，有效缓解清远市黑臭水体体量大、长度长、任务重、监管人员严重不足的现状，推进黑臭水体治理向精准化、网格化模式发展，改善城市水环境，提升城市水系统管理水平。</text>
+  </view>
+  
+  <view class='sou1' bindtap='source'>我要报料</view>
+  <!-- <view class='sou1'>
+    <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo" style='color:#fff;background-color:rgb(8,151,69);border-left:none'>我要报料</button>
+  </view>> -->
+
+  <view class="sou1" bindtap='became'>我要成为监督员</view>
+  <view class='sou2' bindtap='mylist'>我的报料记录</view>
+  <view class='rule' bindtap='gorule'>活动规则 ></view>
+</view>
+<w-split height="80" color="#f2f2f2" showtext='true'></w-split>
+
+<view class='model' wx:if='{{showmodel}}'>
+  <view class='surnmodel'></view>
+  <view class='modelcontent'>
+    <view class='titlemodel'>注册会员</view>
+    <view class='subhead'>为确保报料信息准确性，请先注册会员</view>
+    <view class='continput'>
+      <text class='iconfont icon-xingming'></text>
+      <input placeholder="请输入姓名" bindinput="getname"/>
+    </view>
+    <view class='continput'>
+      <text class='iconfont icon-wuliushouquan'></text>
+      <input placeholder="请授权微信绑定手机"  value='{{phone}}' disabled="disabled"/>
+      <button open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">授权</button>
+    </view>
+    <!-- <view class='continput'>
+      <text class='iconfont icon-wuliushouquan'></text>
+      <input placeholder="请授权微信头像和昵称" value="{{nickName}}" disabled="disabled"/>
+      <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权</button>
+    </view> -->
+    <view class='btn'>
+      <view bindtap='close'>取消</view>
+      <view bindtap='confirm' data-type="1">确定</view>
+    </view>
+  </view>
+</view>
+<view class='model' wx:if="{{ismember}}">
+  <view class='surnmodel'></view>
+  <view class='modelcontent'>
+    <view class='titlemodel'>请填写以下资料</view>
+    <view class='subhead' style='text-align:left;line-height:40rpx;'>
+      <view>.城市黑臭水体监督员每月须上报有效问题30宗；</view>
+      <view>.当月不能完成上报任务的，取消监督员资格；</view>
+      <view>.招聘监督员合计8名。</view>
+    </view>
+    <view class='continput'>
+      <text class='iconfont icon-xingming2'></text>
+      <input placeholder="请输入姓名"  bindinput="getname"/>
+    </view>
+    <view class='continput'>
+      <text class='iconfont icon-wuliushouquan'></text>
+      <input placeholder="请授权微信绑定手机" value='{{phone}}'  disabled="disabled"/>
+      <button open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">授权</button>
+    </view>
+    <view class='notate'>注：提交后需管理员审核，审核约1-3个工作日</view>
+    <view class='btn'>
+      <view bindtap='memberclose'>取消</view>
+      <view bindtap='confirm' data-type="2">确定</view>
+    </view>
+  </view>
+</view>
+<view class='model' wx:if="{{showUserInfo}}">
+  <view class='surnmodel'></view>
+  <view class='modelcontent' style='text-align:center;top:500rpx'>
+    <view >请先授权昵称和头像</view>
+    <view class='btn' style='margin-top:55rpx;'>
+      <view bindtap='UserInfoclose'>取消</view>
+      <view>
+        <button open-type='getUserInfo' style='background: #fff;color: rgb(8,151,69);border-left: none;width: 100%;height: 85rpx;line-height: 85rpx;' lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+

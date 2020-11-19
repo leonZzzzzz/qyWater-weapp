@@ -1,0 +1,119 @@
+.model{
+  width:100%;height:100%;
+  position:fixed;
+  top:0
+}
+.surnmodel{
+  width:100%;height:100%;
+  /* background:#000; */
+  /* opacity: 0.5; */
+}
+.modelcontent{
+  position:absolute;
+  z-index:10;
+  background:#fff;
+  border-radius: 10rpx;
+  padding-top:30rpx;
+  width:650rpx;
+  left:50rpx;
+  bottom:50rpx;
+}
+.titlemodel{
+  padding:0 30rpx;
+  text-align: center;
+  font-size:36rpx;
+  font-weight:bold;
+}
+.subhead{
+  padding:0 30rpx;
+  color:#999;
+  font-size:26rpx;
+  margin-top:20rpx;
+  margin-bottom:40rpx;
+  line-height: 44rpx;
+  /* text-align: center; */
+}
+.continput{
+  border:1px solid #eee;
+  background:rgb(245,246,249);
+  border-radius: 10rpx;
+  padding:15rpx 30rpx;
+  display:flex;
+  margin:20rpx 30rpx 0 30rpx;
+}
+.continput>text{
+  color:rgb(92,194,136);
+  font-size:50rpx;
+}
+.continput>input{
+  font-size:30rpx;
+  margin-left:20rpx;
+  margin-top:5rpx;
+}
+.auth{
+  margin-top: 5rpx;
+  border-left: 1px solid #ddd;
+  padding-left: 36rpx;
+  color: rgb(8,151,69);
+}
+.notate{
+  font-size:26rpx;
+  color:rgb(255,167,82);
+  margin:30rpx;
+}
+.btn{
+  margin-top:40rpx;
+  display:flex;
+  justify-content: space-between;
+  border-top:1px solid #eee;
+  height:100rpx;
+  line-height: 100rpx;
+}
+.btn>view{
+  /* width:50%; */
+  width:100%;
+  text-align: center;
+  font-weight:bold
+}
+/* .btn>view:first-child{
+  border-right:1rpx solid #eee;
+} */
+.btn>view:last-child{
+  color:rgb(8,151,69)
+}
+
+.page-section-gap{
+  box-sizing: border-box;
+  /* padding: 0 30rpx; */
+}
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+
+button {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top:7rpx;
+  padding-top:4rpx;
+  padding-left: 35rpx;
+  border-left:1px solid #ddd;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 0px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: rgb(8,151,69);
+  /* background-color:rgb(8,151,69); */
+}
+  
+button::after {
+  border: none;
+  /* background-color:rgb(8,151,69); */
+  line-height: 0;
+  margin-left:none;
+}

@@ -1,0 +1,85 @@
+<view class='top' wx:if="{{status=='pending'}}">上报内容需等待管理员审核受理</view>
+<view class='search'>
+  <picker style='line-height:100rpx' mode="date" header-text="选择时间" fields="month" start="{{startTime}}"  bindchange="selectDataTime">
+    <view class="date">
+      <text>{{month?month:'请选择'}}</text>
+      <text class='iconfont icon-xiajiantou'></text>
+    </view>
+  </picker>
+  <view wx:if="{{applystatus==2}}" class='righticon1'>
+    <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200923/null/ac10100d746d449e0174b9e3684d0c93.png'></image>
+    <view>
+      <text class='iconfont icon-jianduzhe'></text>
+      <text>监督员</text>
+    </view>
+  </view>
+  <view wx:else class='righticon'>
+    <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200923/null/ac10100d746d449e0174b9d78f140c92.png'></image>
+    <view>
+      <text class='iconfont icon-zhiyuanzhe'></text>
+      <text>志愿者</text>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-x class='scroll' >
+  <view class='nav'>
+    <view bindtap='changeprograma' class="nav_img" data-status='pending'>
+      <view class="nav_text" selectable="false" space="false" decode="false">已上报({{totals.pendingQty||0}})</view>
+      <view class="nav_bot {{status=='pending'?'bottombor':''}}"></view>
+    </view>
+    <view bindtap='changeprograma' class="nav_img" data-status='passed'>
+      <view class="nav_text" selectable="false" space="false" decode="false">已受理({{totals.passedQty||0}})</view>
+      <view class="nav_bot {{status=='passed'?'bottombor':''}}"></view>
+    </view>
+    <view bindtap='changeprograma' class="nav_img" data-status='notPassed'>
+      <view class="nav_text" selectable="false" space="false" decode="false">未受理({{totals.notPassedQty||0}})</view>
+      <view class="nav_bot {{status=='notPassed'?'bottombor':''}}"></view>
+    </view>
+  </view>
+</scroll-view>
+<view class='list' wx:if='{{showloading}}'>
+  <block wx:if="{{recordlist.length>0}}">
+    <view class='box' wx:for="{{recordlist}}">
+      <text class='riqi'>{{item.createTime}}</text>
+      <view style='margin:30rpx 20rpx 0 20rpx;'>
+        <view class='content'>
+          <text>所属河流</text>
+          <view>{{item.riverName}}</view>
+        </view>
+        <view class='content'>
+          <text>详细地址</text>
+          <view style='width:440rpx'>{{item.address}}</view>
+          <text class='iconfont icon-dizhi adress'  bindtap="onGuideTap" data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}' data-bankName='{{item.address}}'></text>
+        </view>
+        <view class='content'>
+          <text>水体描述</text>
+          <view>{{item.keyword}}</view>
+        </view>
+        <view class='content'>
+          <text>详细情况</text>
+          <view>{{item.info}}</view>
+        </view>
+        <view class='images'>
+          <block wx:for="{{item.pics}}" wx:for-item='val'>
+            <!-- <image  src='{{imageurl+val}}'></image> -->
+            <image bindtap='previewImage' src='{{imageurl+val}}' data-img='{{item.pics}}' data-src='{{imageurl+val}}'></image>
+          </block>
+        </view>
+        <view class="remark" wx:if="{{item.remark&&status=='notPassed'}}">
+          <view style='font-size:30rpx'>{{item.remark}}</view>
+          <view style='font-size:26rpx'>{{item.auditTime}}</view>
+        </view>
+        <view class="remark2" wx:if="{{item.remark&&status=='passed'}}">
+          <view style='font-size:30rpx'>{{item.remark}}</view>
+          <view style='font-size:26rpx'>{{item.auditTime}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view wx:else class='nolist'>
+    <text class='iconfont icon-web__zanwujilu'></text>
+    <view>暂无数据</view>
+  </view>
+</view>
+<view style='height:100rpx;'></view>
+<w-split></w-split>

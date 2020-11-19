@@ -1,0 +1,52 @@
+<view class='con' wx:if='{{status==1}}'>
+  <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b536a5980c02.png'></image>
+  <view class='text'>申请已提交，正在审核中</view>
+  <view class='audit'>
+    <view>● 请等待管理员审核，审核约1-3个工作日</view>
+    <view>● 如审核不通过，会返回监督员申请页，可重新申请</view>
+  </view>
+  <view class='btn' bindtap='goback'>返回首页</view>
+</view>
+<view class='con' wx:if='{{status==2}}'>
+  <view class='row'>
+    <view class='row_one'>
+      <image wx:if="{{userinfo.headImage}}" src='{{userinfo.headImage}}'></image>
+      <text wx:else class='iconfont icon-touxiang avator'></text>
+      <text class='name'>{{userinfo.name}}<text wx:if='{{userinfo.appellation}}'>({{userinfo.appellation}})</text></text>
+    </view>
+    <view class='row_two'>
+      <text class='iconfont icon-jianduzhe'></text>
+      <text>监督员</text>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='boxc'>
+      <view>{{surplus}}</view>
+      <text>剩余目标数</text>
+    </view>
+    <view class='boxc'>
+      <view>{{qtyResponse.total}}</view>
+      <text>反馈数</text>
+    </view>
+    <view class='boxc'>
+      <view>{{qtyResponse.passedQty}}</view>
+      <text>审核通过数</text>
+    </view>
+  </view>
+  <view class='audit'>
+    <view style='margin-bottom:10rpx;'>考核要求：</view>
+    <view>● 每月须上报有效问题30宗</view>
+    <view>● 如当月不能完成上报任务的，取消监督员资格</view>
+  </view>
+  <view class='btn1' bindtap='confirm'>我要报料</view>
+</view>
+<view class='con' wx:if='{{status==-1}}'>
+  <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b5390f420c03.png'></image>
+  <view class='text' style='color:rgb(234,81,73)'>抱歉，您的申请被驳回</view>
+  <view class='audit'>
+    <view>不通过原因可能是名额已满或户籍所在地不在河流周边</view>
+  </view>
+  <view class='btn1' bindtap='reapply'>重新申请</view>
+  <view class='btn2' bindtap='goback'>返回首页</view>
+</view>
+<w-split></w-split>

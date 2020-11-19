@@ -1,0 +1,37 @@
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map
+      id="myMap"
+      style="width: 100%; height: 1100px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+      max-scale='20'
+      min-scale='3'
+      bindtap="getCenterLocation"
+    ></map>
+  </view>
+  <view class='adres'>
+    <view>{{address}}</view>
+    <view class='btn' bindtap='gosource'>确认</view>
+  </view>
+</view>
+
+
+<!-- <view class="map_container">
+  <map class='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}" bindcontroltap="bindcontroltap" 
+  polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' bindtap='bindcontroltap'
+    show-location></map>
+</view>
+<view class='list-guide'>
+  <view bindtap="onGuideTap" data-latitude='39.92392' data-longitude='116.411885' data-bankName='最高人民检察院'>
+    <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b3a5fa4d0bdd.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>导航</text>
+  </view>
+  <view bindtap='onbankTap' data-bankId="{{item.BANK_ID}}">
+    <image src='http://kingsuer-1255600302.file.myqcloud.com/attachments/20200922/null/ac10100d746d449e0174b3a5fa4d0bdd.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>详情</text>
+  </view>
+</view> -->

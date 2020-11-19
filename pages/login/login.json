@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "2020清远市黑臭水体 “清道夫”",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "w-split": "../../components/split/split"
+  }
+}
